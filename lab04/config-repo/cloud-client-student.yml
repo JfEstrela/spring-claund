@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: student-server
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:alunodb   
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
+logging:
+  level:
+    com.jf.estrela.microserviceclass.cloud.student.server.feign.DisciplineClient: DEBUG
+
+feign:
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
