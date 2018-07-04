@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.jf.estrela.microserviceclass.cloud.student.server.repository.StudentRepository;
+import com.jf.estrela.microserviceclass.cloud.student.server.service.DisciplineServiceProxy;
 import com.jf.estrela.microserviceclass.cloud.student.server.service.StudentService;
 import com.jf.estrela.microserviceclass.cloud.student.server.conf.RibbonConfiguration;
 import com.jf.estrela.microserviceclass.cloud.student.server.dto.StudentDTO;
@@ -23,6 +24,8 @@ public class StudentController {
 	
 	@Autowired
 	private StudentService service;
+	
+	
 	
 	@GetMapping
 	public ResponseEntity<List<Student>> getStudentsByDiscipline(){

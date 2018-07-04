@@ -12,7 +12,7 @@ public class StudentDTO implements Serializable{
 	private String name;
 	private Integer registration;
 	private String email;
-	private List<DisciplineDTO> disciplines;
+	private List<String> disciplines;
 	
 	public Long getId() {
 		return id;
@@ -38,10 +38,10 @@ public class StudentDTO implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public List<DisciplineDTO> getDisciplines() {
+	public List<String> getDisciplines() {
 		return disciplines;
 	}
-	public void setDisciplines(List<DisciplineDTO> disciplines) {
+	public void setDisciplines(List<String> disciplines) {
 		this.disciplines = disciplines;
 	}
 	

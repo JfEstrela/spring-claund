@@ -11,6 +11,9 @@ public class StudentService {
 	
 	@Autowired
 	DisciplineClient disciplineClient;
+	
+	@Autowired
+	private DisciplineServiceProxy disciplineServiceProxy;
 	 
 	 
 	 @SuppressWarnings("unchecked")
@@ -20,7 +23,7 @@ public class StudentService {
 		 dto.setId(1L);
 		 dto.setRegistration(1);
 		 dto.setEmail("teste@teste");
-		 dto.setDisciplines(disciplineClient.getAllDisciplinas().getBody());
+		 dto.setDisciplines(disciplineServiceProxy.getNomesDisciplines());
 		 return dto;
 	 }
 

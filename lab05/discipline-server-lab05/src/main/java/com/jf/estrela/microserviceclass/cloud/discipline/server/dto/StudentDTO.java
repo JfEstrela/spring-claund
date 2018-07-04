@@ -9,6 +9,15 @@ public class StudentDTO implements Serializable{
 	private Integer registration;
 	private String email;
 	
+	public StudentDTO() {}
+	
+	
+	public StudentDTO(String name, Integer registration, String email) {
+		super();
+		this.name = name;
+		this.registration = registration;
+		this.email = email;
+	}
 	public Long getId() {
 		return id;
 	}

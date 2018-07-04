@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.jf.estrela.microserviceclass.cloud.discipline.server.dto.StudentDTO;
+import com.jf.estrela.microserviceclass.cloud.discipline.server.service.StudentClientFallback;
 
-@FeignClient("student-server")
+@FeignClient(name="student-server",fallback = StudentClientFallback.class)
 public interface StudentsClients {
 	
 	  @RequestMapping(value = "/students", method = RequestMethod.GET)
